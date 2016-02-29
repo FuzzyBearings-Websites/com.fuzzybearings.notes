@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<div class="home">
+	<table class="post-list">
+		{% for post in site.posts %}
+		<tr>
+			<td><span class="post-meta" style="padding-right: 2em">{{ post.date | date: "%b %-d" }}</td>
+			<td><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a><span class="post-meta" style="padding-left: 1em"><span class="post-family"><a href="/{{ post.categories[0] }}">#{{ post.categories[0] }}</a></span></span></td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
